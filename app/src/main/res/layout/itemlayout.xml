@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/movie_poster"
+        android:layout_width="94dp"
+        android:layout_height="119dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/friends" />
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Friends"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/movie_rating"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/movie_poster"
+        app:layout_constraintTop_toTopOf="@id/movie_poster" />
+
+    <TextView
+        android:id="@+id/movie_details"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:maxLines="2"
+        android:text="мелодрама, комедия\n1994, США"
+        android:textColor="#CCCCCC"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/movie_title"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/movie_poster"
+        app:layout_constraintTop_toBottomOf="@id/movie_title" />
+
+    <!-- Рейтинг -->
+    <TextView
+        android:id="@+id/movie_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9.2"
+        android:textSize="20sp"
+        android:textColor="#01DAC6"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
